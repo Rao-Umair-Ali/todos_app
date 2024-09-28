@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:todos_app/todoListPage/todoList_Page_component/button.dart';
 import 'package:todos_app/todoListPage/todoList_Page_component/greetTiles.dart';
 import 'package:todos_app/todoListPage/todoList_Page_component/headingText.dart';
+import 'package:todos_app/todoListPage/todoList_Page_component/listTilesAdd.dart';
+import 'package:todos_app/todoListPage/todoList_Page_component/listViewTask.dart';
 import 'package:todos_app/todoListPage/todoList_Page_component/listviewcom.dart';
 
 class Todolistpage extends StatefulWidget {
@@ -23,15 +26,30 @@ class _TodolistpageState extends State<Todolistpage> {
             ),
             Expanded(
               flex: 1,
-              child: headingText(),
+              child: headingText("My priority Task", 35),
             ),
             Expanded(
-              flex: 1,
+              flex: 2,
               child: listViewCom(),
             ),
             Expanded(
-              flex: 3,
-              child: headingText(),
+              flex: 1,
+              child: listTileAdd(),
+            ),
+            Expanded(
+              flex: 1,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  buttonsElevated("Today's Task"),
+                  buttonsElevated("Weekly Task"),
+                  buttonsElevated("Monthly Task")
+                ],
+              ),
+            ),
+            Expanded(
+              flex: 4,
+              child: listViewTask(),
             ),
           ],
         ));

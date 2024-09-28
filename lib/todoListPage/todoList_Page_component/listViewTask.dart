@@ -6,9 +6,8 @@ List<Map<String, String>> todoLists = [
   {"time": "7:30", "title": "Flutter", "description": "learning todo"},
   {"time": "7:30", "title": "Flutter", "description": "learning todo"}
 ];
-Widget listViewCom() {
+Widget listViewTask() {
   return ListView.separated(
-    scrollDirection: Axis.horizontal,
     itemCount: todoLists.length,
     itemBuilder: (context, index) {
       return Padding(

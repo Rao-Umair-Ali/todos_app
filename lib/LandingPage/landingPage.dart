@@ -48,7 +48,7 @@ class Landingpage extends StatelessWidget {
             ),
             Expanded(
               flex: 1,
-              child: Center(child: buttonElevated()),
+              child: Center(child: buttonElevated(context)),
             ),
           ],
         ),

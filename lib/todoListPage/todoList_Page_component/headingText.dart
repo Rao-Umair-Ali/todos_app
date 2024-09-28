@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-Widget headingText() {
-  return const Text(
-    "My Priority Task",
+Widget headingText(String text, double numb) {
+  return Text(
+    text,
     style: TextStyle(
       color: Colors.white,
-      fontSize: 35,
-      shadows: [
+      fontSize: numb,
+      shadows: const [
         Shadow(
           blurRadius: 5.0,
           color: Color.fromARGB(255, 255, 255, 255),
