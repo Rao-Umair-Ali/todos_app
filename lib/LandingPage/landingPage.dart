@@ -9,21 +9,21 @@ class Landingpage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(153, 32, 55, 173),
+      backgroundColor: const Color.fromARGB(153, 0, 28, 168),
       body: Padding(
         padding: const EdgeInsets.all(10.0),
         child: Column(
           children: [
             Expanded(
-              flex: 2, // Takes 2 parts of the available space
+              flex: 2,
               child: Center(
                   child: Padding(
                 padding: const EdgeInsets.only(left: 50, right: 10),
                 child: text1(),
-              )), // Title Text
+              )),
             ),
             Expanded(
-              flex: 4, // Takes 4 parts of the available space
+              flex: 4,
               child: Image.asset(
                 "assets/images/Illustration.png",
                 fit: BoxFit.contain,
@@ -41,13 +41,14 @@ class Landingpage extends StatelessWidget {
             Expanded(
               flex: 2,
               child: Center(
-                  child: Padding(
-                      padding: const EdgeInsets.only(left: 45, right: 30),
-                      child: text2())), // Description Text
+                child: Padding(
+                    padding: const EdgeInsets.only(left: 45, right: 30),
+                    child: text2()),
+              ),
             ),
             Expanded(
               flex: 1,
-              child: Center(child: buttonElevated()), // Button
+              child: Center(child: buttonElevated()),
             ),
           ],
         ),
