@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-Widget buttonsElevated(name) {
+Widget priorityButton({required String name, colorName}) {
   return ConstrainedBox(
     constraints: const BoxConstraints(maxHeight: 120),
     child: ElevatedButton(
       style: ElevatedButton.styleFrom(
         elevation: 30,
-        backgroundColor: const Color.fromARGB(255, 66, 23, 139),
+        backgroundColor: colorName,
       ),
       onPressed: () {},
       child: Text(

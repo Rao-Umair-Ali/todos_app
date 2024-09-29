@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:todos_app/LandingPage/landingPage.dart';
+import 'package:todos_app/addPage/addPage.dart';
+import 'package:todos_app/addPage/addPagecomponents/addPagelistTile.dart';
 import 'package:todos_app/todoListPage/todoListPage.dart';
 
 void main() {
@@ -14,7 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Landingpage(),
+      home: AddPage(),
     );
   }
 }

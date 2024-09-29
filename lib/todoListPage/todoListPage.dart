@@ -21,7 +21,7 @@ class _TodolistpageState extends State<Todolistpage> {
         body: Column(
           children: [
             Expanded(
-              flex: 1,
+              flex: 2,
               child: greetTile(),
             ),
             Expanded(
@@ -33,22 +33,24 @@ class _TodolistpageState extends State<Todolistpage> {
               child: listViewCom(),
             ),
             Expanded(
-              flex: 1,
-              child: listTileAdd(),
-            ),
-            Expanded(
-              flex: 1,
-              child: Row(
+              flex: 2,
+              child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  buttonsElevated("Today's Task"),
-                  buttonsElevated("Weekly Task"),
-                  buttonsElevated("Monthly Task")
+                  listTileAdd(context),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      buttonsElevated("Today's Task"),
+                      buttonsElevated("Weekly Task"),
+                      buttonsElevated("Monthly Task")
+                    ],
+                  ),
                 ],
               ),
             ),
             Expanded(
-              flex: 4,
+              flex: 5,
               child: listViewTask(),
             ),
           ],
