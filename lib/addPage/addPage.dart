@@ -3,17 +3,10 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 
 class AddPage extends StatefulWidget {
-  AddPage({
-    super.key,
-    required this.sss,
-    this.task,
-    this.index,
-  });
+  AddPage({super.key, required this.sss, required this.eee});
 
-  Map<String, String>? task;
-  int? index;
   Function(dynamic a, dynamic b, dynamic c, dynamic d, dynamic prio) sss;
-
+  Function(dynamic a, dynamic b, dynamic c, dynamic d, dynamic prio) eee;
   @override
   State<AddPage> createState() => _AddPageState();
 }
@@ -25,18 +18,6 @@ class _AddPageState extends State<AddPage> {
   TextEditingController dfield = TextEditingController();
   String priorityval = "";
   bool press = true;
-  @override
-  void initState() {
-    super.initState();
-    if (widget.task != null) {
-      afield.text = widget.task!["timeFrom"]!;
-      bfield.text = widget.task!["timeTo"]!;
-      cfield.text = widget.task!["title"]!;
-      dfield.text = widget.task!["description"]!;
-      priorityval = widget.task!["priority"]!;
-    }
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
