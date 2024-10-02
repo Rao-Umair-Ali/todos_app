@@ -22,7 +22,10 @@ class _TodolistpageState extends State<Todolistpage> {
   }
 
   int indexNo = 0;
-  edit(newA, newB, newC, newD, newE) {}
+  edit(newA, newB, newC, newD, newE, prio, index, List highpriority) {
+    indexNo = index;
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -190,7 +193,10 @@ class _TodolistpageState extends State<Todolistpage> {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => AddPage(sss: add)),
+                                  builder: (context) => AddPage(
+                                        sss: add,
+                                        eee: edit,
+                                      )),
                             );
                           },
                         )),
@@ -341,7 +347,8 @@ class _TodolistpageState extends State<Todolistpage> {
                                       context,
                                       MaterialPageRoute(
                                           builder: (context) => AddPage(
-                                                sss: edit,
+                                                sss: add,
+                                                eee: edit,
                                               )),
                                     );
                                   },
